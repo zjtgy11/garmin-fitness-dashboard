@@ -1,5 +1,24 @@
-项目说明：本工具用于自动同步 Garmin 健身数据并生成看板。
+How to Use
+🚀 Getting Started
+1. Clone and Install Dependencies
+This project is optimized for the Debian environment. First, ensure you have Python 3 installed, then install the required libraries:
 
-使用方法：下载代码后，请在 sync_data.py 中填写你自己的 Garmin 账号密码，并确保已在 Debian 环境下安装相关依赖。
+Bash
+pip install garminconnect fitparse streamlit pandas plotly
+2. Configuration
+Before running the sync, you must provide your Garmin credentials. Open sync_data.py and fill in your account information:
 
-需安装 garminconnect 和 fitparse 这两个 Python 库。
+Python
+# Open sync_data.py
+G_USER = "your_email@example.com"
+G_PASS = "your_password"
+3. Data Synchronization
+Run the sync script to fetch your latest activities:
+
+Bash
+python3 sync_data.py
+4. Launch the Dashboard
+Start the Streamlit application to view your data:
+
+Bash
+streamlit run gym_app.py
